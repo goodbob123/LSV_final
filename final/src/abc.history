@@ -1,0 +1,18 @@
+source -s abc.rc
+read benchmarks/ex00.truth 
+read -h
+read_truth benchmarks/ex00.truth 
+read_truth -h
+read_truth -x benchmarks/ex00.truth 
+read_truth -xf benchmarks/ex00.truth 
+collapse
+strash
+write_aiger ./answer/ex00.aig
+ps -m
+&read_aiger ./answer/ex00.aig 
+&read ./answer/ex00.aig 
+print_stats
+source -s abc.rc
+read_aiger ./answer/ex00.aig 
+transduction
+&transduction
