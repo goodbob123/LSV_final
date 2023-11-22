@@ -10,6 +10,10 @@ elif [[ $command == "re" ]]; then
     ./abc -c "read $read; rewrite; refactor; write $write;"
 elif [[ $command == "deep" ]]; then
     ./abc -c "&read $read; &deepsyn -I 4 -J 50 -T 10 -S 111 -t; &write $write;"
-else
+elif [[ $command == "exist" ]]; then
+    if [[ ! -e $write ]]; then
+        ./abc -c "read_truth -xf $read; collapse; sop; fx; strash; rewrite; refactor; rewrite; refactor; write $write; &read $write; &transduction -I 111 -R 117; &dc2; &deepsyn -I 4 -J 50 -T 5 -S 111 -t; &transduction -I 111 -R 117; &dc2; &deepsyn -I 4 -J 50 -T 10 -S 111 -t; &write $write;"
+    fi
+elif [[ $command == "all" ]]; then
     ./abc -c "read_truth -xf $read; collapse; sop; fx; strash; rewrite; refactor; rewrite; refactor; write $write; &read $write; &transduction -I 111 -R 117; &dc2; &deepsyn -I 4 -J 50 -T 5 -S 111 -t; &transduction -I 111 -R 117; &dc2; &deepsyn -I 4 -J 50 -T 10 -S 111 -t; &write $write;"
 fi
