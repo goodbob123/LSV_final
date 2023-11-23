@@ -6,13 +6,39 @@ read_truth -h
 read_truth -x benchmarks/ex00.truth 
 read_truth -xf benchmarks/ex00.truth 
 collapse
-strash
 write_aiger ./answer/ex00.aig
 ps -m
-&read_aiger ./answer/ex00.aig 
 &read ./answer/ex00.aig 
 print_stats
-source -s abc.rc
-read_aiger ./answer/ex00.aig 
 transduction
+source -s abc.rc
+&read_aiger ./answer/ex00.aig 
+read_aiger ./answer/ex00.aig 
+strash
+&gate
 &transduction
+gate
+&dc2 -h
+&gate -h
+&transduction ./benchmarks/ex00.truth -t
+&transduction ./benchmarks/ex00.truth
+&transduction -t ./benchmarks/ex00.truth
+&transduction -h
+&transduction -t ./benchmarks/ex00.truth&read answer/ex00.aig 
+&read answer/ex00.aig 
+&transduction -T 4 -S 4 -t ./benchmarks/ex00.truth
+source -s abc.rc
+read answer/ex00.aig 
+rewrite
+refactor
+print_stats
+strash
+collapse
+&deepsyn -I 4 -J 50 -T 5 -S 111 -t;
+&deepsyn -h
+&read answer/ex00.aig 
+&deepsyn -I 4 -J 50 -T 10 -S 111 -t
+source -s abc.rc
+&read answer/aig/ex00.aig 
+&transduction
+&transduction -h
