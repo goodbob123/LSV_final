@@ -1,0 +1,4 @@
+abc/src/sat/bsat/satSolver2i.o
+abc/src/sat/satoko/solver.o
+*.o
+*.d
