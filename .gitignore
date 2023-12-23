@@ -1,5 +1,9 @@
 abc/src/sat/bsat/satSolver2i.o
 abc/src/sat/satoko/solver.o
+/abc/abc.history
+abc/abc
+abc
 *.o
 *.d
 final/src/abc.history
+.vscode

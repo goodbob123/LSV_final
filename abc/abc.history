@@ -1,2 +1,3 @@
-source -s abc.rc
 clear
+source -s abc.rc
+&deepsyn -h
