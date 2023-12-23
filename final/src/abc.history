@@ -38,7 +38,63 @@ collapse
 &deepsyn -h
 &read answer/ex00.aig 
 &deepsyn -I 4 -J 50 -T 10 -S 111 -t
-source -s abc.rc
 &read answer/aig/ex00.aig 
 &transduction
 &transduction -h
+read read answer/ex00.aig
+read answer/ex00.aig
+read answer/aig/ex00.aig
+print_stat -h
+print_state
+print_stats -h
+print_stats -m
+read
+read answer/aig/ex00.aig 
+print_stats
+read -h
+source -s abc.rc
+rewrite -h
+refactor -h
+resub -h
+&deepsyn -h
+&dc2
+&dc2 -h
+&transduction -h
+read answer/aig/ex00.aig 
+&transduction
+&transduction -T 4
+&get
+&deepsyn -I 4 -J 50 -T 10 -S 22 -t;
+&put
+orchestrate -h
+recadd3 -h
+rec_add3 -h
+rec_add3
+recadd3
+rec_start3
+rec_start3 -h
+source -s abc.rc
+read ./answer/aig/ex00.aig 
+resyn2
+resyn2a
+resyn3
+compress2
+resyn2rs
+compress2rs
+fraig_sweep -h
+fraig_sweep
+write_aiger annealing
+fraig
+strash
+print_stats
+read answer/aig/ex00.aig 
+&get; &transduction -I 123 -R 17; &dc2; &put;
+read_aiger annealing.aig
+source -s abc.rc
+read_truth -xf ./benchmarks/ex01.truth;
+collapse
+lsv_bdd_reorder 2
+strash
+lsv_sa
+write_aiger annealing.aig;
+&get; &transduction -T 4 -I 111 -R 117; &dc2; &put;
