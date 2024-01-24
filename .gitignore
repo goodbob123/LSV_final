@@ -7,3 +7,6 @@ abc
 *.d
 final/src/abc.history
 .vscode
+/final_ML/RL/*.txt
+/final_ML/RL/models/sample_model/*.zip
+/final_ML/CircuitNN/cktnn
