@@ -1,0 +1,5 @@
+src/abc/abc.history
+src/abc/abc
+*.o
+*.d
+.vscode

@@ -1,0 +1,4 @@
+ beforeAIGsize: 72
+    afterSweep: 72
+  aterOptimize: 72
+  afterAIGsize: 72

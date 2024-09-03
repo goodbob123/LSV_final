@@ -1,0 +1,4 @@
+ beforeAIGsize: 980
+    afterSweep: 980
+  aterOptimize: 980
+  afterAIGsize: 980

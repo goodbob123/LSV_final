@@ -1,0 +1,17 @@
+aig 33 7 0 2 26
+8
+67
+
+
+#	%#i0 a
+i1 b
+i2 c
+i3 d
+i4 e
+i5 f
+i6 g
+o0 F0
+o1 F1
+c
+This file was produced by the GIA package in ABC on Wed Nov 22 02:49:17 2023
+For information about AIGER format, refer to http://fmv.jku.at/aiger

@@ -1,0 +1,3 @@
+&read ./LSV_data/aig/ex01.aig 
+source -s abc.rc
+read ./LSV_data/window_aag/ex01.aag 

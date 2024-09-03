@@ -1,0 +1,4 @@
+ beforeAIGsize: 640
+    afterSweep: 640
+  aterOptimize: 640
+  afterAIGsize: 640

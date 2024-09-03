@@ -1,0 +1,291 @@
+Input: ref_materials/benchmarks/ex00.truth
+Output: LSV_data/aig/ex00.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex00.truth; strash; write LSV_data/aig/ex00.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex00.aig ./LSV_data/aag/ex00.aag
+
+fraig> CIRRead ./LSV_data/aag/ex00.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 245
+    afterSweep: 245
+  aterOptimize: 245
+  afterAIGsize: 245
+output file: ./LSV_data/result/00.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex00.aag
+PI.size: 14 touchPI: 14
+
+fraig> CIRCec  ./LSV_data/aag/ex00.aag ./LSV_data/window_aag/ex00.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2622442 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex01.truth
+Output: LSV_data/aig/ex01.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex01.truth; strash; write LSV_data/aig/ex01.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex01.aig ./LSV_data/aag/ex01.aag
+
+fraig> CIRRead ./LSV_data/aag/ex01.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+[1;31mAIG[ 863] find window[0m
+find 2-resub, posUnate
+skip: Gs > MFFC
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 1538
+    afterSweep: 1538
+  aterOptimize: 1538
+  afterAIGsize: 1538
+output file: ./LSV_data/result/01.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex01.aag
+PI.size: 14 touchPI: 14
+
+fraig> CIRCec  ./LSV_data/aag/ex01.aag ./LSV_data/window_aag/ex01.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2622461 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex02.truth
+Output: LSV_data/aig/ex02.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex02.truth; strash; write LSV_data/aig/ex02.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex02.aig ./LSV_data/aag/ex02.aag
+
+fraig> CIRRead ./LSV_data/aag/ex02.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+[1;31mAIG[ 358] find window[0m
+[1;31mAIG[ 357] find window[0m
+[1;31mAIG[ 344] find window[0m
+[1;31mAIG[ 167] find window[0m
+find 1-resub, posUnate
+remove 743
+[1;32mAIG[ 167] resyn[0m
+[1;31mAIG[ 166] find window[0m
+find 2-resub, negUnate
+skip: Gs > MFFC
+find 3-resub, posUnate
+skip: Gs > MFFC
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 2281
+    afterSweep: 2281
+  aterOptimize: 2281
+  afterAIGsize: 2280
+output file: ./LSV_data/result/02.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex02.aag
+PI.size: 16 touchPI: 16
+
+fraig> CIRCec  ./LSV_data/aag/ex02.aag ./LSV_data/window_aag/ex02.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2622485 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex03.truth
+Output: LSV_data/aig/ex03.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex03.truth; strash; write LSV_data/aig/ex03.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex03.aig ./LSV_data/aag/ex03.aag
+
+fraig> CIRRead ./LSV_data/aag/ex03.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+[1;31mAIG[ 630] find window[0m
+[1;31mAIG[ 629] find window[0m
+[1;31mAIG[ 612] find window[0m
+[1;31mAIG[ 611] find window[0m
+[1;31mAIG[ 610] find window[0m
+[1;31mAIG[ 585] find window[0m
+[1;31mAIG[ 584] find window[0m
+[1;31mAIG[ 583] find window[0m
+[1;31mAIG[ 533] find window[0m
+[1;31mAIG[ 532] find window[0m
+[1;31mAIG[ 531] find window[0m
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 632
+    afterSweep: 632
+  aterOptimize: 632
+  afterAIGsize: 632
+output file: ./LSV_data/result/03.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex03.aag
+PI.size: 16 touchPI: 16
+
+fraig> CIRCec  ./LSV_data/aag/ex03.aag ./LSV_data/window_aag/ex03.aag // circ command to verify the new aag is correct
+start simulate CEC
+start check CEC
+PO [   0 ] match
+PO [   1 ] match
+PO [   2 ] match
+PO [   3 ] match
+-------------------[ Circuit Valid ]---------------------
+
+fraig> quit -f
+
+Input: ref_materials/benchmarks/ex04.truth
+Output: LSV_data/aig/ex04.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex04.truth; strash; write LSV_data/aig/ex04.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex04.aig ./LSV_data/aag/ex04.aag
+
+fraig> CIRRead ./LSV_data/aag/ex04.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 106
+    afterSweep: 106
+  aterOptimize: 106
+  afterAIGsize: 106
+output file: ./LSV_data/result/04.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex04.aag
+PI.size: 10 touchPI: 10
+
+fraig> CIRCec  ./LSV_data/aag/ex04.aag ./LSV_data/window_aag/ex04.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2622589 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex05.truth
+Output: LSV_data/aig/ex05.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex05.truth; strash; write LSV_data/aig/ex05.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex05.aig ./LSV_data/aag/ex05.aag
+
+fraig> CIRRead ./LSV_data/aag/ex05.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+[1;31mAIG[2985] find window[0m
+remove 2970
+remove 2971
+remove 2972
+remove 2973
+remove 2974
+Simplifying: 2976 merging !2977...
+[1;32mAIG[2991] resyn[0m
+[1;31mAIG[2985] find window[0m
+[1;31mAIG[1197] find window[0m
+[1;31mAIG[  57] find window[0m
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 4308
+    afterSweep: 4308
+  aterOptimize: 4308
+  afterAIGsize: 4302
+output file: ./LSV_data/result/05.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex05.aag
+PI.size: 14 touchPI: 14
+
+fraig> CIRCec  ./LSV_data/aag/ex05.aag ./LSV_data/window_aag/ex05.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2622598 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex06.truth
+Output: LSV_data/aig/ex06.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex06.truth; strash; write LSV_data/aig/ex06.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex06.aig ./LSV_data/aag/ex06.aag
+
+fraig> CIRRead ./LSV_data/aag/ex06.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 181
+    afterSweep: 181
+  aterOptimize: 181
+  afterAIGsize: 181
+output file: ./LSV_data/result/06.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex06.aag
+PI.size: 14 touchPI: 14
+
+fraig> CIRCec  ./LSV_data/aag/ex06.aag ./LSV_data/window_aag/ex06.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2624118 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex07.truth
+Output: LSV_data/aig/ex07.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex07.truth; strash; write LSV_data/aig/ex07.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex07.aig ./LSV_data/aag/ex07.aag
+
+fraig> CIRRead ./LSV_data/aag/ex07.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 72
+    afterSweep: 72
+  aterOptimize: 72
+  afterAIGsize: 72
+output file: ./LSV_data/result/07.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex07.aag
+PI.size: 6 touchPI: 6
+
+fraig> CIRCec  ./LSV_data/aag/ex07.aag ./LSV_data/window_aag/ex07.aag // circ command to verify the new aag is correct
+start simulate CEC
+start check CEC
+PO [   0 ] match
+PO [   1 ] match
+PO [   2 ] match
+PO [   3 ] match
+PO [   4 ] match
+-------------------[ Circuit Valid ]---------------------
+
+fraig> quit -f
+
+Input: ref_materials/benchmarks/ex08.truth
+Output: LSV_data/aig/ex08.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex08.truth; strash; write LSV_data/aig/ex08.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex08.aig ./LSV_data/aag/ex08.aag
+
+fraig> CIRRead ./LSV_data/aag/ex08.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 3287
+    afterSweep: 3287
+  aterOptimize: 3287
+  afterAIGsize: 3287
+output file: ./LSV_data/result/08.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex08.aag
+PI.size: 16 touchPI: 16
+
+fraig> CIRCec  ./LSV_data/aag/ex08.aag ./LSV_data/window_aag/ex08.aag // circ command to verify the new aag is correct
+start simulate CEC
+./runAll.sh: line 1: 2624126 Segmentation fault      (core dumped) ./fraig -f $dofile
+Input: ref_materials/benchmarks/ex09.truth
+Output: LSV_data/aig/ex09.aig
+ABC command line: "read_truth -xf ref_materials/benchmarks/ex09.truth; strash; write LSV_data/aig/ex09.aig;".
+
+fraig> AIG2aag ./LSV_data/aig/ex09.aig ./LSV_data/aag/ex09.aag
+
+fraig> CIRRead ./LSV_data/aag/ex09.aag
+
+fraig> CIRwindow
+-------------------[ DO WINDOW START ]---------------------
+[1;31mAIG[4672] find window[0m
+[1;31mAIG[3958] find window[0m
+[1;31mAIG[3493] find window[0m
+find 2-resub, negUnate
+remove 3495
+[1;32mAIG[3493] resyn[0m
+[1;31mAIG[3388] find window[0m
+[1;31mAIG[ 315] find window[0m
+-------------------[ DO WINDOW FINISH ]---------------------
+ beforeAIGsize: 7161
+    afterSweep: 7161
+  aterOptimize: 7161
+  afterAIGsize: 7160
+output file: ./LSV_data/result/09.txt
+
+fraig> CIRWrite -Output ./LSV_data/window_aag/ex09.aag
+PI.size: 16 touchPI: 16
+
+fraig> CIRCec  ./LSV_data/aag/ex09.aag ./LSV_data/window_aag/ex09.aag // circ command to verify the new aag is correct
+start simulate CEC

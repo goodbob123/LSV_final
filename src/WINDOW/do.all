@@ -1,0 +1,5 @@
+AIG2aag ./LSV_data/aig/ex09.aig ./LSV_data/aag/ex09.aag
+CIRRead ./LSV_data/aag/ex09.aag
+CIRwindow
+CIRWrite -Output ./LSV_data/window_aag/ex09.aag
+quit -f
